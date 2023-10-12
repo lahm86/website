@@ -1,0 +1,63 @@
+{# def title #}
+<Layout title={ title }>
+  <ProjectCard variant="vertical" title={ title } image="static/tr1x/logo.svg">
+    <ul class="no-bullets">
+      <li>
+        <a href='https://github.com/lostartefacts/tr1x'>
+          <IconGithub/>
+          GitHub repository
+        </a>
+      </li>
+
+      <li>
+        <a href='https://github.com/LostArtefacts/TR1X/releases/latest'>
+          <IconDownload/>
+          Download
+        </a>
+      </li>
+    </ul>
+  </ProjectCard>
+
+  <p>This is an open source implementation of the classic Tomb Raider I game (1996), made by reverse engineering the TombATI / GLRage variant of the original game and replacing proprietary audio/video libraries with open source variants.</p>
+
+  <h3>Showcase</h3>
+
+  <p>Some of the more important features and improvements over the original game experience.</p>
+
+  {% do attrs.set(showcase=[
+    {
+      "caption": "Restored braid",
+      "image": "static/tr1x/braid.jpg",
+    },
+    {
+      "caption": "Enemy health bar and UI scaling",
+      "image": "static/tr1x/enemy_health_bar_and_scaling.jpg",
+    },
+    {
+      "caption": "3D pickups",
+      "image": "static/tr1x/3d_pickups.jpg",
+    },
+    {
+      "caption": "Improved stats",
+      "image": "static/tr1x/compass_stats.jpg",
+    },
+    {
+      "caption": "Customizable draw distance",
+      "image": "static/tr1x/draw_distance.webp",
+    },
+    {
+      "caption": "Fly cheat",
+      "image": "static/tr1x/fly_cheat.jpg",
+    },
+    {
+      "caption": "Free camera",
+      "image": "static/tr1x/free_camera.jpg",
+    },
+    {
+      "caption": "PS1 UI and new graphics options",
+      "image": "static/tr1x/ps1_ui_and_gfx.jpg",
+    }
+  ]) %}
+
+  <Showcase items={attrs.showcase}/>
+</Layout>

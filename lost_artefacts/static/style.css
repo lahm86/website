@@ -1,0 +1,149 @@
+body {
+  background: white;
+  color: black;
+  margin: 0 0 2rem 0;
+  font-size: 14pt;
+  line-height: 20pt;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+}
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
+.Watermark {
+  background-image:
+    linear-gradient(0, #ffffffcc, #ffffffee),
+    url('logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.no-bullets>li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: #0aa;
+  text-decoration: none;
+}
+a.active {
+  font-weight: bold;
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+h1 {
+  margin: 0;
+  font-family: Agdasima;
+  font-size: 40pt;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: Agdasima;
+  font-size: 30pt;
+  font-weight: normal;
+}
+
+h1:first-of-type,
+h2:first-of-type {
+  margin-top: 0;
+}
+
+.Logo>a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Logo>a>img {
+  max-height: 50pt;
+}
+
+.Nav {
+  border-bottom: 1pt solid currentColor;
+  padding: 1rem;
+  margin: 0 0 2rem 0;
+  font-size: 20pt;
+  line-height: initial;
+}
+.Nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Nav ul>li {
+  display: block;
+}
+.Nav a {
+  font-family: Agdasima;
+}
+
+.Showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.Showcase figure {
+  margin: 0;
+  padding: 0.25rem;
+  background: #ddd;
+}
+.Showcase figcaption {
+  padding: 0.25rem 0;
+}
+.Showcase li {
+  text-align: center;
+}
+
+.ProjectCard {
+  display: grid;
+}
+.ProjectCard.horizontal {
+  gap: 2rem;
+  grid-template-columns: 30% auto;
+  justify-content: center;
+  align-items: center;
+}
+.ProjectCard.vertical {
+  gap: 1rem;
+  grid-template-rows: min-content min-content;
+  justify-content: center;
+  text-align: center;
+}
+.ProjectCard h2 {
+  margin-top: 0;
+}
+.ProjectCard-content {
+}
+
+.Icon {
+  vertical-align: middle;
+}
+
+.Contact {
+  display: flex;
+}
+.Contact>aside>img {
+  width: 20rem;
+}
+.Contact>div {
+  margin-top: 1rem;
+}
+

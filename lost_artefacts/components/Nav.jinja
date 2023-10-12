@@ -1,0 +1,17 @@
+{# def #}
+<nav class="Nav">
+  <ul class="no-bullets">
+    {% for item in nav %}
+      <li>
+        {% if loop.index == 1 %}
+          <Logo/>
+        {% else %}
+          <a href="{{ item.out }}"{% if item.active %} class="active"{% endif %}>
+            {{ item.title }}
+          </a>
+        {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
