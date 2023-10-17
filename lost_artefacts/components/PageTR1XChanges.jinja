@@ -1,0 +1,378 @@
+{# def title #}
+<Layout title={ title }>
+  <Breadcrumbs links={[
+    { "title": "Home", "href": "index.html" },
+    { "title": "Projects", "href": "projects.html" },
+    { "title": "TR1X", "href": "tr1x.html" },
+    { "title": "Changes", "href": "tr1x_changes.html" },
+  ]}/>
+
+  <h3>Changes and improvements over original game</h3>
+
+  <p>Not all options are turned on by default. Refer to <code>TR1X_ConfigTool.exe</code> for details.</p>
+
+  <h4>UI</h4>
+  <ul>
+    <li>added proper UI and bar scaling</li>
+    <li>added enemy health bars</li>
+    <li>added PS1 style UI</li>
+    <li>added fade effects to displayed images</li>
+    <li>improved support for windowed mode</li>
+  </ul>
+
+  <h4>Gameplay</h4>
+  <ul>
+    <li>added ability to set user-defined FOV</li>
+    <li>added ability to select weapons / using items with numeric keys</li>
+    <li>added ability to look around while running</li>
+    <li>added ability to forward and backward jump while looking</li>
+    <li>added ability to look up and down while hanging</li>
+    <li>added ability to sidestep like in TR3</li>
+    <li>added ability to jump-twist and somersault like in TR2+</li>
+    <li>added ability to cancel ledge-swinging animation like in TR2+</li>
+    <li>added ability to jump at any point while running like in TR2+</li>
+    <li>added ability to automatically walk to items when nearby</li>
+    <li>added ability to roll while underwater like in TR2+</li>
+    <li>added a pause screen</li>
+    <li>added a choice whether to play NG or NG+ without having to play the entire game</li>
+    <li>added Japanese mode (guns deal twice the damage, inspired by JP release of TR3); available for both NG and NG+</li>
+    <li>added ability to restart level on death</li>
+    <li>added ability to restart the adventure from any level when loading a game</li>
+    <li>added the "Story so far..." option in the select level menu to view cutscenes and FMVs</li>
+    <li>added graphics effects, lava emitters, flame emitters, and waterfalls to the savegame so they now persist on load</li>
+    <li>added an option to restore the mummy in City of Khamoon room 25, similar to the PS version</li>
+    <li>added a flag indicating if new game plus is unlocked to the player config which allows the player to select new game plus or not when making a new game</li>
+    <li>fixed keys and items not working when drawing guns immediately after using them</li>
+    <li>fixed counting the secret in The Great Pyramid</li>
+    <li>fixed running out of ammo forcing Lara to equip pistols even if she doesn't carry them</li>
+    <li>fixed a crash when Lara is on fire and goes too far away from where she caught fire</li>
+    <li>fixed settings not being saved when exiting the game with Alt+F4</li>
+    <li>fixed settings not persisting chosen layout (default vs. user keys)</li>
+    <li>fixed the infamous Tihocan crocodile bug (integer overflow causing creatures to deal damage across the entire level)</li>
+    <li>fixed Lara not being able to grab parts of some bridges</li>
+    <li>fixed Lara voiding if a badly placed timed door closes on her (doesn't occur in OG levels)</li>
+    <li>fixed bats being positioned too high</li>
+    <li>fixed alligators dealing no damage if Lara remains still in the water</li>
+    <li>fixed shotgun shooting when a locked target moves out of Lara's sight</li>
+    <li>fixed shotgun shooting too fast when not aiming at a target</li>
+    <li>fixed Lara grabbing ledges she shouldn't in stacked rooms (mainly St. Francis Folly tower)</li>
+    <li>fixed rare cases of Lara getting set on fire on a bridge over lava</li>
+    <li>fixed saving the game near Bacon Lara breaking her movement</li>
+    <li>fixed Lara glitching through static objects into a black void</li>
+    <li>fixed Lara pushing blocks through doors</li>
+    <li>fixed Lara switching to pistols when completing a level with other guns</li>
+    <li>fixed empty mutant shells in Unfinished Business spawning Lara's hips</li>
+    <li>fixed gun pickups disappearing in rare circumstances on save load</li>
+    <li>fixed broken dart ricochet effect</li>
+    <li>fixed exploded mutant pods sometimes appearing unhatched on reload</li>
+    <li>fixed bridges at floor level appearing under the floor</li>
+    <li>fixed underwater currents breaking in rare cases</li>
+    <li>fixed Lara loading inside a movable block if she's on a stack near a room portal</li>
+    <li>fixed a game crash on shutdown if the action button is held down</li>
+    <li>fixed Scion 1 respawning on load</li>
+    <li>fixed triggered flip effects not working if there are no sound devices</li>
+    <li>fixed ceiling heights at times being miscalculated, resulting in camera issues and Lara being able to jump into the ceiling</li>
+    <li>fixed the ape not performing the vault animation when climbing</li>
+    <li>fixed Natla's gun moving while she is in her semi death state</li>
+    <li>fixed the bear pat attack so it does not miss Lara</li>
+    <li>fixed dead centaurs exploding again after saving and reloading</li>
+    <li>
+      fixed the following floor data issues:
+      <table class="borders">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Changes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>St. Francis' Folly</th>
+            <td>moved the music trigger for track 3 in room 4 behind the Neptune door, and restored track 15 to play after using the 4 keys</td>
+          </tr>
+          <tr>
+            <th>Tomb of Tihocan</th>
+            <td>missing trigger in room 62 for enemy 34</td>
+          </tr>
+          <tr>
+            <th>City of Khamoon</th>
+            <td>incorrect trapdoor trigger types in rooms 31 and 34</td>
+          </tr>
+          <tr>
+            <th>Obelisk of Khamoon</th>
+            <td>missing switch trigger type in room 66</td>
+          </tr>
+          <tr>
+            <th>Atlantean Stronghold</th>
+            <td>fixed poorly configured portals between rooms 74 and 12</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+
+  <h4>Cheats</h4>
+  <ul>
+    <li>added a fly cheat</li>
+    <li>added a level skip cheat</li>
+    <li>added a door open cheat (while in fly mode)</li>
+    <li>added a cheat to increase the game speed</li>
+    <li>added a cheat to explode Lara like in TR2 and TR3</li>
+  </ul>
+
+  <h4>Input</h4>
+  <ul>
+    <li>added ability to move camera around with W,A,S,D</li>
+    <li>added additional custom control schemes</li>
+    <li>added the ability to unbind unessential keys</li>
+    <li>added the ability to reset control schemes to default</li>
+    <li>added customizable controller support</li>
+    <li>added an inverted look camera option</li>
+    <li>fixed freeze when holding the Action key during end of level</li>
+    <li>fixed inability to switch Control keys when shimmying</li>
+    <li>fixed setting user keys being very difficult</li>
+    <li>fixed skipping FMVs triggering inventory</li>
+    <li>fixed skipping credits working too fast</li>
+    <li>fixed not being able to close level stats with Escape</li>
+    <li>fixed Lara jumping forever when alt+tabbing out of the game</li>
+    <li>stopped the default controls from functioning when the user unbound them</li>
+  </ul>
+
+  <h4>Statistics</h4>
+  <ul>
+    <li>added ability to keep timer on in inventory</li>
+    <li>added optional compass level stats</li>
+    <li>added optional final statistics screen</li>
+    <li>added optional deaths counter</li>
+    <li>added optional total pickups and kills per level</li>
+    <li>added unobtainable pickups and kills stats support in the gameflow</li>
+  </ul>
+
+  <h4>Visuals</h4>
+  <ul>
+    <li>added optional shotgun flash sprites</li>
+    <li>added optional rendering of pickups on the ground as 3D meshes</li>
+    <li>added Lara's braid to each level</li>
+    <li>added support for displaying more than 3 pickup sprites</li>
+    <li>added more control over when to show health bar and air bar</li>
+    <li>added customizable health bar and air bar</li>
+    <li>added rounded shadows (instead of the default octagon)</li>
+    <li>added adjustable in-game brightness</li>
+    <li>added support for HD FMVs</li>
+    <li>added fanmade 16:9 menu backgrounds</li>
+    <li>added optional fade effects</li>
+    <li>added a vsync option</li>
+    <li>added contextual arrows to menu options</li>
+    <li>fixed thin black lines between polygons</li>
+    <li>fixed black screen flashing when navigating the inventory</li>
+    <li>fixed detail levels text flashing with any option change</li>
+    <li>fixed underwater caustics animating at 2x speed</li>
+    <li>fixed inconsistencies in some enemy textures</li>
+    <li>fixed the animation of Lara's left arm when the shotgun is equipped</li>
+    <li>
+      fixed the following room texture issues:
+      <table class="borders">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Changes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <tr>
+            <th>Gym</th>
+            <td>incorrect textures in room 9</td>
+          </tr>
+          <tr>
+            <th>Caves</th>
+            <td>an incorrect texture in room 6<br/>missing textures in rooms 1, 10, 14 and 30</td>
+          </tr>
+          <tr>
+            <th>City of Vilcabamba</th>
+            <td>an incorrect texture in room 26<br/>a missing texture in room 15</td>
+          </tr>
+          <tr>
+            <th>Lost Valley</th>
+            <td>incorrect textures in rooms 6 and 9<br/>missing textures in rooms 9, 25, 26, 27, 51, and 90</td>
+          </tr>
+          <tr>
+            <th>Tomb of Qualopec</th>
+            <td>missing textures in room 8</td>
+          </tr>
+          <tr>
+            <th>St. Francis' Folly</th>
+            <td>incorrect textures in rooms 18 and 35</td>
+          </tr>
+          <tr>
+            <th>Colosseum</th>
+            <td>incorrect Midas textures appearing at the roof<br/>missing textures in rooms 2 and 7</td>
+          </tr>
+          <tr>
+            <th>Palace Midas</th>
+            <td>incorrect textures in room 31<br/>missing textures in rooms 2, 5, 9, 13, 30, and 53</td>
+          </tr>
+          <tr>
+            <th>The Cistern</th>
+            <td>missing textures in rooms 3 and 9</td>
+          </tr>
+          <tr>
+            <th>Tomb of Tihocan</th>
+            <td>incorrect textures in rooms 75 and 89</td>
+          </tr>
+          <tr>
+            <th>City of Khamoon</th>
+            <td>incorrect textures in rooms 51 and 64<br/>a missing texture in room 58</td>
+          </tr>
+          <tr>
+            <th>Sanctuary of the Scion</th>
+            <td>missing textures in rooms 1, 21, 53, and 54</td>
+          </tr>
+          <tr>
+            <th>Natla's Mines</th>
+            <td>a missing texture in room 35<br/>overlapping textures in room 55</td>
+          </tr>
+          <tr>
+            <th>Atlantis</th>
+            <td>incorrect textures in rooms 5, 18, 43, 50, 52, 58, 78, 85 and 87<br/>missing texture in room 27</td>
+          </tr>
+          <tr>
+            <th>Atlantis Cutscene</th>
+            <td>an incorrect texture in room 16</td>
+          </tr>
+          <tr>
+            <th>The Great Pyramid</th>
+            <td>incorrect textures in rooms 2, 5, 31, 50, 52, 65 and 66<br/>missing textures in rooms 21, 25, 26, and 66</td>
+          </tr>
+          <tr>
+            <th>Return to Egypt</th>
+            <td>a missing texture in room 98</td>
+          </tr>
+          <tr>
+            <th>Temple of the Cat</th>
+            <td>incorrect textures in rooms 50, 70, 71, 76, 78, 87 and 96<br/>a missing texture in 75</td>
+          </tr>
+          <tr>
+            <th>Atlantean Stronghold</th>
+            <td>incorrect textures in rooms 2, 6, 7 and 75<br/>missing textures in rooms 5, 13, 19 and 74</td>
+          </tr>
+          <tr>
+            <th>The Hive</th>
+            <td>incorrect textures in room 8, 13 and 18</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+
+  <h4>Audio</h4>
+  <ul>
+    <li>added music during the credits</li>
+    <li>added an option to turn off sound effect pitching</li>
+    <li>added an option to use the PlayStation Uzi sound effects</li>
+    <li>added the current music track and timestamp to the savegame so they now persist on load</li>
+    <li>added the triggered music tracks to the savegame so one shot tracks don't replay on load</li>
+    <li>added detection for animation commands to play SFX on land, water or both</li>
+    <li>fixed the sound of collecting a secret killing the music</li>
+    <li>fixed audio mixer stopping playing sounds on big explosions</li>
+    <li>fixed game audio not muting when game is minimized</li>
+    <li>fixed underwater ambient sound effect not playing</li>
+    <li>fixed sound effects playing rapidly in sound menu if input held down</li>
+    <li>fixed sounds stopping instead of pausing when using the inventory or pausing</li>
+    <li>
+      fixed the following music triggers:
+      <table class="borders">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Changes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Caves</th>
+            <td>converted track 9 in room 34 to one shot</td>
+          </tr>
+          <tr>
+            <th>Tomb of Qualopec</th>
+            <td>converted track 17 in room 25 to one shot</td>
+          </tr>
+          <tr>
+            <th>St. Francis' Folly</th>
+            <td>converted track 7 in room 18 to one shot</td>
+          </tr>
+          <tr>
+            <th>Obelisk of Khamoon</th>
+            <td>converted track 3 in room 12 and track 4 in room 32 to one shot</td>
+          </tr>
+          <tr>
+            <th>Sanctuary of the Scion</th>
+            <td>converted track 10 in room 0 to one shot</td>
+          </tr>
+          <tr>
+            <th>Natla's Mines</th>
+            <td>converted track 3 in room 86 to one shot</td>
+          </tr>
+          <tr>
+            <th>Atlantis</th>
+            <td>converted track 8 in room 59 to one shot</td>
+          </tr>
+          <tr>
+            <th>The Great Pyramid</th>
+            <td>converted track 8 in room 36 to one shot</td>
+          </tr>
+          <tr>
+            <th>Return to Egypt</th>
+            <td>converted track 19 in room 0, track 14 in room 15, track 15 in room 19, track 16 in room 22, track 6 in room 61, and track 11 in room 93 to one shot</td>
+          </tr>
+          <tr>
+            <th>Temple of the Cat</th>
+            <td>converted track 12 in room 14, track 7 in room 98, and track 20 in room 100 to one shot</td>
+          </tr>
+          <tr>
+            <th>Atlantean Stronghold</th>
+            <td>converted track 20 in room 4, track 19 in room 13, track 11 in room 17, track 15 in room 20, and track 12 in room 25 to one shot</td>
+          </tr>
+          <tr>
+            <th>The Hive</th>
+            <td>converted track 9 in room 8, track 6 in room 18, track 12 in room 30, track 18 in room 31, track 3 in room 32, and track 20 in room 35 to one shot</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+
+  <h4>Mods</h4>
+  <ul>
+    <li>added ability to adjust Lara's starting health (easy no damage mod)</li>
+    <li>added ability to disable healing between levels</li>
+    <li>added ability to disable certain item pickups (all medpacks, shotgun, Magnums and/or UZIs)</li>
+    <li>added ability to disable main menu demos, FMVs and/or cutscenes</li>
+    <li>added external game flow (no longer 2 different .exes for TR1 and TR1UB). Refer to [GAMEFLOW.md](GAMEFLOW.md) for details</li>
+    <li>added automatic calculation of secret counts (no longer having to fiddle with the .exe to get correct secret stats)</li>
+    <li>added save game crystals game mode (enabled via gameflow)</li>
+    <li>added per-level customizable water color (with customizable blue component)</li>
+    <li>added per-level customizable fog distance</li>
+  </ul>
+
+  <h4>Miscellaneous</h4>
+  <ul>
+    <li>added Linux builds</li>
+    <li>added .jpeg/.png screenshots</li>
+    <li>added an option to pause sound in the inventory screen</li>
+    <li>added ability to skip FMVs with the Action key</li>
+    <li>added ability to make freshly triggered (runaway) Pierre replace an already existing (runaway) Pierre</li>
+    <li>expanded internal game memory limit from 3.5 MB to 16 MB</li>
+    <li>expanded moveable limit from 256 to 10240</li>
+    <li>expanded maximum textures from 2048 to 8192</li>
+    <li>expanded maximum texture pages from 32 to 128</li>
+    <li>ported audio decoding library to ffmpeg</li>
+    <li>ported video decoding library to ffmpeg</li>
+    <li>ported image decoding library to ffmpeg</li>
+    <li>ported audio output library to SDL</li>
+    <li>ported input method to SDL</li>
+    <li>changed saves to be put in the saves/ directory</li>
+    <li>fixed playing the secret sound in Tomb of Tihocan</li>
+    <li>fixed reading user settings not restoring the volume</li>
+  </ul>
+</Layout>

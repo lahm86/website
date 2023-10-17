@@ -1,15 +1,11 @@
 {# def #}
 <nav class="Nav">
+  <Logo/>
   <ul class="no-bullets">
-    {% for item in nav %}
-      <li>
-        {% if loop.index == 1 %}
-          <Logo/>
-        {% else %}
-          <a href="{{ item.out }}"{% if item.active %} class="active"{% endif %}>
-            {{ item.title }}
-          </a>
-        {% endif %}
+    {% for item in nav[1:] %}
+      <li{% if item.active %} class="active"{% endif %}>
+        <a href="{{ item.href }}">
+          {{ item.title }}
         </a>
       </li>
     {% endfor %}

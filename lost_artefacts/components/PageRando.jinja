@@ -1,4 +1,21 @@
 {# def title #}
 <Layout title={ title }>
-  WIP
+  <Breadcrumbs links={[
+    { "title": "Home", "href": "index.html" },
+    { "title": "Projects", "href": "projects.html" },
+    { "title": "Randomizer", "href": "rando.html" },
+  ]}/>
+
+  <ProjectLogo title="Randomizer" image="static/rando/logo.png" show_title={ true }/>
+
+  <p>Useful links:</p>
+
+  <ul class="no-bullets">
+    <li>
+      <a href='https://github.com/lostartefacts/tr-rando'>
+        <IconGithub/>
+        GitHub repository
+      </a>
+    </li>
+  </ul>
 </Layout>

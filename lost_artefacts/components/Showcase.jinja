@@ -2,12 +2,7 @@
 <ul class="Showcase no-bullets">
   {% for item in items %}
     <li>
-      <a href="{{ item.image }}">
-      <figure>
-        <img src="{{ item.image }}" alt="{{ item.caption }}"/>
-        <figcaption>{{ item.caption }}</figcaption>
-      </figure>
-      </a>
+      <ImageCard variant="vertical" image={ item.image } caption={ item.caption }/>
     </li>
   {% endfor %}
 </ul>

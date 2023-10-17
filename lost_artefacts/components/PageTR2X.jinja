@@ -1,15 +1,79 @@
 {# def title #}
 <Layout title={ title }>
-  <ProjectCard variant="vertical" title={ title } image="static/tr2x/logo.svg">
-    <ul class="no-bullets">
-      <li>
-        <a href='https://github.com/lostartefacts/tr2x'>
-          <IconGithub/>
-          GitHub repository
-        </a>
-      </li>
-    </ul>
-  </ProjectCard>
+  <Breadcrumbs links={[
+    { "title": "Home", "href": "index.html" },
+    { "title": "Projects", "href": "projects.html" },
+    { "title": "TR2X", "href": "tr2x.html" },
+  ]}/>
 
-  WIP
+  <ProjectLogo title="TR2X" image="static/tr2x/logo.svg"/>
+
+  <p>TR2X is an open-source decompilation project for Tomb Raider 2, created as
+  a sequel to the successful TR1X project for Tomb Raider 1. Our project is in
+  the early stages, and our main focus is on decompiling as much of the game as
+  possible.</p>
+
+  <h2>Useful links</h2>
+
+  <ul class="no-bullets">
+    <li>
+      <a href='https://github.com/lostartefacts/tr2x'>
+        <IconGithub/>
+        GitHub repository
+      </a>
+    </li>
+
+    <li>
+      <a href='https://github.com/lostartefacts/tr2x/tree/master/CHANGELOG.md'>
+        <IconNotes/>
+        Changelog
+      </a>
+    </li>
+  </ul>
+
+  <h2>Our Mission</h2>
+
+  <p>Our mission is to fully decompile Tomb Raider 2 and to eventually enhance
+  the overall gameplay experience.</p>
+
+  <h3>Key Goals</h3>
+  <ul>
+    <li>
+      <strong>Comprehensive Decompilation:</strong><br/>
+      Our primary objective is to achieve a thorough decompilation of Tomb
+      Raider 2, enabling a deeper understanding of its inner workings.
+    </li>
+
+    <li>
+      <strong>Enhancement of UK Box Version:</strong><br/>
+      Our work is based on the UK Box version of Tomb Raider 2. Eventually we
+      hope to reach feature parity with the Steam/multipatch version, and
+      possibly TR2Main as well.
+    </li>
+
+    <li>
+      <strong>Cross-platform Compatibility:</strong><br/>
+      We are committed to making Tomb Raider 2 run natively on Linux, with the
+      possibility of supporting Mac systems in the future.
+    </li>
+
+    <li>
+      <strong>Transparent Development Process:</strong><br/>
+      We value transparency and aim to maintain a transparent development
+      process, ensuring regular updates and engagement with the community.
+    </li>
+
+    <li>
+      <strong>Changelog and Progress Updates:</strong><br/>
+      We strive to provide detailed and reliable changelogs, documenting
+      significant updates and changes made to TR2X. Additionally, we will keep
+      the community informed about the progress of the project.
+    </li>
+  </ul>
+
+  <p>TR2X is currently in the early stages of development, focusing on the
+  decompilation process. We recognize that there is much work to be done.</p>
+
+  <h2>Decompilation progress</h2>
+  <img src='https://github.com/rr-/TR2X/blob/develop/docs/progress.svg?raw=true'/>
 </Layout>

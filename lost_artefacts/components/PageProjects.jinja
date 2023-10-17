@@ -1,0 +1,43 @@
+{# def title #}
+<Layout title={ title }>
+  <Breadcrumbs links={[
+    { "title": "Home", "href": "index.html" },
+    { "title": "Projects", "href": "projects.html" },
+  ]}/>
+
+  <p>List of our currently developed projects:</p>
+
+  {% do attrs.set(projects=[
+    {
+      "href": "tr1x.html",
+      "title": "TR1X",
+      "image": "static/tr1x/logo.svg",
+      "description": "An open source reimplementation of Tomb Raider 1 (1996).",
+    },
+    {
+      "href": "tr2x.html",
+      "title": "TR2X",
+      "image": "static/tr2x/logo.svg",
+      "description": "An open source reimplementation of Tomb Raider 2 (1997).",
+    },
+    {
+      "href": "rando.html",
+      "title": "Randomizer",
+      "image": "static/rando/logo.png",
+      "description": "A project to randomize the appearance and gameplay experience of classic Tomb Raider titles.",
+    }
+  ]) %}
+
+  <ul class="no-bullets">
+    {% for project in attrs.projects %}
+      <li>
+        <ImageCard variant="horizontal" href={ project.href } image={ project.image } caption={ project.title }>
+          <a href="{{ project.href }}">
+            <strong>{{ project.title }}</strong>
+          </a>
+          <p>{{ project.description }}</p>
+        </ImageCard>
+      </li>
+    {% endfor %}
+  </ul>
+</Layout>

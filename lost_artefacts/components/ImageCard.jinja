@@ -1,0 +1,15 @@
+{# def variant, href=None, image, caption #}
+<div class="ImageCard {{ variant }}">
+  <figure>
+    <a href="{{ href or image }}">
+      <img src="{{ image }}" alt="{{ caption }}"/>
+    </a>
+    <figcaption>
+      {% if content %}
+        {{ content }}
+      {% else %}
+        <a href="{{ href or image }}">{{ caption }}</a>
+      {% endif %}
+    </figcaption>
+  </figure>
+</div>

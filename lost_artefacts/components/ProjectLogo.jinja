@@ -1,0 +1,7 @@
+{# def title, image, show_title=False #}
+<div class="ProjectLogo">
+  <img alt="{{ title }}" src="{{ image }}"/>
+  {% if show_title %}
+    <h2>{{ title }}</h2>
+  {% endif %}
+</div>

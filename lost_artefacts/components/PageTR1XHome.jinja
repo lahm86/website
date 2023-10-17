@@ -1,26 +1,48 @@
 {# def title #}
 <Layout title={ title }>
-  <ProjectCard variant="vertical" title={ title } image="static/tr1x/logo.svg">
-    <ul class="no-bullets">
-      <li>
-        <a href='https://github.com/lostartefacts/tr1x'>
-          <IconGithub/>
-          GitHub repository
-        </a>
-      </li>
+  <Breadcrumbs links={[
+    { "title": "Home", "href": "index.html" },
+    { "title": "Projects", "href": "projects.html" },
+    { "title": "TR1X", "href": "tr1x.html" },
+  ]}/>
 
-      <li>
-        <a href='https://github.com/LostArtefacts/TR1X/releases/latest'>
-          <IconDownload/>
-          Download
-        </a>
-      </li>
-    </ul>
-  </ProjectCard>
+  <ProjectLogo title="TR1X" image="static/tr1x/logo.svg"/>
 
   <p>This is an open source implementation of the classic Tomb Raider I game (1996), made by reverse engineering the TombATI / GLRage variant of the original game and replacing proprietary audio/video libraries with open source variants.</p>
 
-  <h3>Showcase</h3>
+  <h2>Useful links</h2>
+
+  <ul class="no-bullets">
+    <li>
+      <a href='https://github.com/LostArtefacts/TR1X/releases/latest'>
+        <IconDownload/>
+        Download
+      </a>
+    </li>
+
+    <li>
+      <a href='https://github.com/lostartefacts/tr1x'>
+        <IconGithub/>
+        GitHub repository
+      </a>
+    </li>
+
+    <li>
+      <a href='https://github.com/lostartefacts/tr1x/tree/master/CHANGELOG.md'>
+        <IconNotes/>
+        Changelog
+      </a>
+    </li>
+
+    <li>
+      <a href='tr1x_changes.html'>
+        <IconBook/>
+        List of changes over OG
+      </a>
+    </li>
+  </ul>
+
+  <h2>Showcase</h2>
 
   <p>Some of the more important features and improvements over the original game experience.</p>
 

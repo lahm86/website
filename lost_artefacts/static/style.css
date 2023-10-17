@@ -1,14 +1,23 @@
+:root {
+  --bg: white;
+  --fg: #333;
+  --link-fg: #0aa;
+  --light-bg: #f5f5f5;
+  --nav-bg: #eee;
+}
+
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
 body {
-  background: white;
-  color: black;
+  background: var(--bg);
+  color: var(--fg);
   margin: 0 0 2rem 0;
   font-size: 14pt;
   line-height: 20pt;
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
-}
-html {
-  scrollbar-gutter: stable both-edges;
 }
 
 .Watermark {
@@ -36,11 +45,8 @@ img {
 }
 
 a {
-  color: #0aa;
+  color: var(--link-fg);
   text-decoration: none;
-}
-a.active {
-  font-weight: bold;
 }
 
 main {
@@ -58,8 +64,33 @@ h1 {
 
 h2 {
   font-family: Agdasima;
-  font-size: 30pt;
+  font-size: 25pt;
   font-weight: normal;
+}
+h3 {
+  font-family: Agdasima;
+  font-size: 25pt;
+  font-weight: normal;
+}
+
+.Content p {
+  margin: 0.5rem 0 1rem 0;
+}
+
+.Content h1,
+.Content h2,
+.Content h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1pt solid #eee;
+}
+.Content h4 {
+  margin: 1rem 0;
+}
+
+.Content ul:not(.no-bullets) p {
+  margin: 0 0 0.5rem 0;
 }
 
 h1:first-of-type,
@@ -71,66 +102,97 @@ h2:first-of-type {
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding-bottom: 1.5rem;
 }
 .Logo>a>img {
   max-height: 50pt;
 }
 
 .Nav {
-  border-bottom: 1pt solid currentColor;
-  padding: 1rem;
-  margin: 0 0 2rem 0;
+  margin: 2rem 0 0 0;
   font-size: 20pt;
-  line-height: initial;
+  line-height: 20pt;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .Nav ul {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: end;
+  gap: 1rem;
 }
 .Nav ul>li {
   display: block;
 }
-.Nav a {
+.Nav ul>li.active {
+  margin-bottom: -1pt;
+  border-bottom: 1pt solid var(--link-fg);
+}
+.Nav ul a {
+  padding: 1rem 2rem;
+  display: inline-block;
   font-family: Agdasima;
 }
 
 .Showcase {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 75%;
+  justify-content: center;
   gap: 1rem;
-}
-.Showcase figure {
-  margin: 0;
-  padding: 0.25rem;
-  background: #ddd;
-}
-.Showcase figcaption {
-  padding: 0.25rem 0;
-}
-.Showcase li {
-  text-align: center;
 }
 
-.ProjectCard {
-  display: grid;
+.ImageCard {
+  margin-bottom: 1rem;
 }
-.ProjectCard.horizontal {
-  gap: 2rem;
-  grid-template-columns: 30% auto;
+.ImageCard p {
+  margin: 0;
+}
+.ImageCard.horizontal figure {
+  margin: 0;
+  display: grid;
+  flex-direction: column;
+  gap: 1rem 0.5rem;
+  grid-template-columns: 10rem auto;
+  align-items: center;
+  gap: 1rem;
+}
+.ImageCard.horizontal figcaption {
+  background: var(--light-bg);
+  padding: 0.5rem 1rem;
+}
+.ImageCard.horizontal figure>a {
+  justify-self: center;
+}
+.ImageCard.horizontal img {
+  max-height: 4rem;
+}
+
+.ImageCard.vertical figure {
+  margin: 0;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  background: var(--light-bg);
+}
+.ImageCard.vertical figcaption {
+  display: flex;
   justify-content: center;
   align-items: center;
-}
-.ProjectCard.vertical {
-  gap: 1rem;
-  grid-template-rows: min-content min-content;
-  justify-content: center;
   text-align: center;
+  min-height: 2.5rem;
+}
+
+.ProjectLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.ProjectLogo img {
+  max-height: 10rem;
 }
 .ProjectCard h2 {
   margin-top: 0;
-}
-.ProjectCard-content {
 }
 
 .Icon {
@@ -138,12 +200,41 @@ h2:first-of-type {
 }
 
 .Contact {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20rem auto;
+  gap: 1rem;
 }
 .Contact>aside>img {
-  width: 20rem;
+  width: 100%;
 }
 .Contact>div {
   margin-top: 1rem;
 }
 
+
+.Breadcrumbs {
+  background: var(--nav-bg);
+  padding: 0.25rem 1rem;
+  margin: 0 0 1rem -1rem;
+}
+.Breadcrumbs>ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.Breadcrumbs>ul>li {
+  display: contents;
+}
+
+
+table.borders {
+  border-collapse: collapse;
+}
+table.borders th {
+  white-space: nowrap;
+}
+table.borders th,
+table.borders td {
+  border: 1pt solid currentColor;
+  padding: 0.15rem 0.5rem;
+}

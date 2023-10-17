@@ -1,0 +1,21 @@
+{# def links #}
+<nav class="Breadcrumbs">
+  <ul class="no-bullets">
+    {% for link in links %}
+      <li>
+        <a href="{{ link.href }}">
+          {% if loop.index == loop.length %}
+            <strong>
+          {% endif %}
+          {{ link.title }}
+          {% if loop.index == loop.length %}
+            </strong>
+          {% endif %}
+        </a>
+        {% if loop.index != loop.length %}
+          <IconChevronRight/>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
